@@ -1,0 +1,141 @@
+{
+  "dataset_info": {
+    "total_rows": 13200,
+    "missing_values": 0,
+    "class_distribution": {
+      "Rainy": 3300,
+      "Cloudy": 3300,
+      "Sunny": 3300,
+      "Snowy": 3300
+    }
+  },
+  "comparison": [
+    {
+      "Модель": "Baseline (Most Frequent)",
+      "CV Accuracy": 0.25,
+      "Test Accuracy": 0.25,
+      "Test F1-macro": 0.1
+    },
+    {
+      "Модель": "Perceptron",
+      "CV Accuracy": 0.8204,
+      "Test Accuracy": 0.7924,
+      "Test F1-macro": 0.7929
+    },
+    {
+      "Модель": "Decision Tree",
+      "CV Accuracy": 0.9101,
+      "Test Accuracy": 0.9133,
+      "Test F1-macro": 0.9135
+    },
+    {
+      "Модель": "MLPClassifier (best: (64, 32), relu)",
+      "CV Accuracy": 0.9091,
+      "Test Accuracy": 0.9064,
+      "Test F1-macro": 0.9068
+    }
+  ],
+  "best_params": {
+    "model__activation": "relu",
+    "model__alpha": 0.0001,
+    "model__hidden_layer_sizes": [
+      64,
+      32
+    ]
+  },
+  "confusion_matrix": {
+    "labels": [
+      "Cloudy",
+      "Rainy",
+      "Snowy",
+      "Sunny"
+    ],
+    "matrix": [
+      [
+        599,
+        37,
+        10,
+        14
+      ],
+      [
+        37,
+        597,
+        16,
+        10
+      ],
+      [
+        30,
+        13,
+        600,
+        17
+      ],
+      [
+        37,
+        12,
+        14,
+        597
+      ]
+    ]
+  },
+  "top_errors": [
+    {
+      "Истинный класс": "Cloudy",
+      "Предсказано": "Rainy",
+      "Количество ошибок": 37
+    },
+    {
+      "Истинный класс": "Rainy",
+      "Предсказано": "Cloudy",
+      "Количество ошибок": 37
+    },
+    {
+      "Истинный класс": "Sunny",
+      "Предсказано": "Cloudy",
+      "Количество ошибок": 37
+    },
+    {
+      "Истинный класс": "Snowy",
+      "Предсказано": "Cloudy",
+      "Количество ошибок": 30
+    },
+    {
+      "Истинный класс": "Snowy",
+      "Предсказано": "Sunny",
+      "Количество ошибок": 17
+    }
+  ],
+  "feature_importances": {
+    "Temperature": 0.29777007161815655,
+    "Visibility (km)": 0.25334487739759126,
+    "UV Index": 0.2497698348602804,
+    "Precipitation (%)": 0.0788057153371538,
+    "Cloud Cover": 0.03286144274050019,
+    "Atmospheric Pressure": 0.029313077863862818,
+    "Season": 0.02839409676290186,
+    "Humidity": 0.015749085348206945,
+    "Wind Speed": 0.012504659522296858,
+    "Location": 0.0014871385490494477
+  },
+  "learning_curve": [
+    {
+      "Записей в обучении": 1056,
+      "Test Accuracy": 0.8386
+    },
+    {
+      "Записей в обучении": 2640,
+      "Test Accuracy": 0.9004
+    },
+    {
+      "Записей в обучении": 5280,
+      "Test Accuracy": 0.9027
+    },
+    {
+      "Записей в обучении": 7920,
+      "Test Accuracy": 0.9091
+    },
+    {
+      "Записей в обучении": 10560,
+      "Test Accuracy": 0.9064
+    }
+  ]
+}

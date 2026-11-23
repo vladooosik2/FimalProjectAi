@@ -1,0 +1,78 @@
+{
+  "numeric": {
+    "Temperature": {
+      "min": -25.0,
+      "max": 109.0,
+      "median": 21.0,
+      "q05": -9.0,
+      "q95": 44.0
+    },
+    "Humidity": {
+      "min": 20.0,
+      "max": 109.0,
+      "median": 70.0,
+      "q05": 29.0,
+      "q95": 98.0
+    },
+    "Wind Speed": {
+      "min": 0.0,
+      "max": 48.5,
+      "median": 9.0,
+      "q05": 1.0,
+      "q95": 20.5
+    },
+    "Precipitation (%)": {
+      "min": 0.0,
+      "max": 109.0,
+      "median": 58.0,
+      "q05": 5.0,
+      "q95": 98.0
+    },
+    "Atmospheric Pressure": {
+      "min": 800.12,
+      "max": 1199.21,
+      "median": 1007.65,
+      "q05": 980.84,
+      "q95": 1029.04
+    },
+    "UV Index": {
+      "min": 0.0,
+      "max": 14.0,
+      "median": 3.0,
+      "q05": 0.0,
+      "q95": 11.0
+    },
+    "Visibility (km)": {
+      "min": 0.0,
+      "max": 20.0,
+      "median": 5.0,
+      "q05": 1.0,
+      "q95": 10.5
+    }
+  },
+  "categorical": {
+    "Cloud Cover": [
+      "clear",
+      "cloudy",
+      "overcast",
+      "partly cloudy"
+    ],
+    "Season": [
+      "Autumn",
+      "Spring",
+      "Summer",
+      "Winter"
+    ],
+    "Location": [
+      "coastal",
+      "inland",
+      "mountain"
+    ]
+  },
+  "classes": [
+    "Cloudy",
+    "Rainy",
+    "Snowy",
+    "Sunny"
+  ]
+}
